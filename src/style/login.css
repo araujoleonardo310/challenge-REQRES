@@ -1,7 +1,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    background: rgb(2, 0, 0);
+   background: rgb(242 243 245);
 }
 
 .container-login {
@@ -15,7 +15,7 @@ body {
     align-items: center;
     
     border-radius: 2em;
-    border: 1px solid rgb(105, 105, 105);
+    border: 2px solid rgb(221 217 221);
     
     background: #ffffff;
 
@@ -47,6 +47,7 @@ body {
     color: #000;
 }
 
+
 .email, .password {
     padding: 0.5em;
     border-width: 1px;
@@ -54,7 +55,6 @@ body {
     border-left: none;
     border-right: none;
     outline: none;
-    background: none;
     font-style: italic;
 
 }
