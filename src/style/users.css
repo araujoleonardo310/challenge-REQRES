@@ -1,0 +1,73 @@
+body {
+    width: 100vw;
+    height: 100vh;
+
+   background: #fff;
+}
+
+.container-users {
+    width: 47vw;
+    height: 92vh;
+    margin: 3em auto;
+    padding: 1rem;
+    border-radius: 2em;
+    border: 2px solid rgb(221 217 221);
+    background: #ebebeb5d;
+}
+
+.users-profile {
+    display: flex;
+    width: 23rem;    
+}
+
+.users {
+    justify-content: space-between;
+    width: 43rem;
+    height: 12vh;
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+
+    background: #fff;
+    border-radius: 1rem;
+    border: 1px solid #b1b1b1;
+}
+
+.photo {
+    width: 4rem;
+}
+
+.title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-bottom: 1px solid #b1b1b1;
+    padding-bottom: 0.5rem;
+}
+
+.fa-users {
+    margin-right: 0.5rem;
+}
+
+.name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+}
+
+.email {
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.button {
+    height: 2rem;
+    background: #0cd9d9;
+    width: 6rem;
+    margin-right: 1rem;
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
