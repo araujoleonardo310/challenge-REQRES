@@ -7,29 +7,34 @@ body {
 
 .container-users {
     width: 47vw;
+    height: auto;
     margin: 3em auto;
     padding: 1rem;
-    border-radius: 2em;
+    border-radius: 1rem;
     border: 2px solid rgb(221 217 221);
     background: #ebebeb5d;
 }
 
-.users-profile {
-    display: flex;
-    width: 23rem;    
+.users-title {
+    margin-bottom: 2rem;
 }
 
 .users {
     justify-content: space-between;
-    width: 43rem;
+    width: 45rem;
     height: 12vh;
     display: flex;
-    margin: 1rem;
+    margin-bottom: 1rem;
     align-items: center;
 
     background: #fff;
     border-radius: 1rem;
     border: 1px solid #b1b1b1;
+}
+
+.users-profile {
+    display: flex;
+    width: 23rem;    
 }
 
 .photo {
@@ -39,9 +44,6 @@ body {
     margin-right: 1rem;
 }
 
-.users-title {
-    margin-bottom: 1rem;
-}
 
 .title {
     font-size: 1.4rem;
