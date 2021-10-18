@@ -1,10 +1,9 @@
 const api = 'https://reqres.in/api';
+document.querySelector('form').addEventListener('submit', event => {
+        event.preventDefault(), getValores();
+})
 
-async function getValores() {
-
-    document.querySelector('form').addEventListener('submit', event => {
-        event.preventDefault();
-      })
+async function getValores() {   
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -14,19 +13,22 @@ async function getValores() {
         password: password
     };
 
-    const respose = await axios.post(`${api}/login`, dados)
-    respose.then(function(respose){
-        console.log("AAAAAAAAAA")
+    const response = await axios.post(`${api}/login`, dados);
+    console.log(response.status)
+     
+    if (response.status === 200) {
+        var token = response.token;
+        localStorage.setItem("token", token);
+        var url = '../src/pages/users.html';
+        return window.location.href(url) 
 
-        if (respose.status !== 200) {
-            var alerta = alert("Dados incorretos!");          
-            return alerta 
-        } else {
-            var token = localStorage.setItem(respose.data.token)
-            var url = window.location.href('../src/pages/users.html');
-            return token, url
-        };
-    });        
+    } else {
+                
+        var alerta = alert("Dados incorretos!");          
+        return alerta
+    };
+        
+      
 };
 
 
