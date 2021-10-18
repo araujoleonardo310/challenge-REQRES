@@ -1,7 +1,6 @@
 const api = 'https://reqres.in/api/users?page=2';
 const divContainer = document.querySelector(".container-users");
 
-
 const GetUsers = async () => {
     var responseUsers = await axios.get(`${api}`);
     ListUsers(responseUsers.data.data)                    
@@ -9,7 +8,16 @@ const GetUsers = async () => {
 
 GetUsers();
 
-function ListUsers(item){
+function ListUsers(item) {
+    var div = document.createElement('div');    
+    div =
+    `
+    <div class="users-title">
+        <p class="title"><i class="fas fa-users"></i>Usuários</p>     
+    </div>   
+    
+    `
+
     let usuarios = "";
     item.forEach(element => {
         usuarios +=
@@ -25,9 +33,11 @@ function ListUsers(item){
             <button class="button" id="button">Visite</button>            
         </div>
         `        
-        divContainer.innerHTML = usuarios;
+        divContainer.innerHTML = div + usuarios;
     });
 }
+
+
 
 
 
