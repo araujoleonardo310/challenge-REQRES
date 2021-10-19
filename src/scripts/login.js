@@ -13,24 +13,18 @@ async function getValores() {
         password: password
     };
 
-    await axios.post(`${api}/login`, dados).then(function(response){
-        return ValidacaoResponse(response)
-    });
-};
-
-function ValidacaoResponse(response){
-
-    if (response.status === 200) {
+    try {
+        const response = await axios.post(`${api}/login`, dados)
         var token = response.data.token;
         localStorage.setItem("token", token);
         var url = '../pages/users.html';
-        return window.location.href = url 
+        return window.location.href = url;
 
-    } else if (response.status !== 200){                
+    } catch (error) {
         var alerta = alert("Dados incorretos!");          
-        return alerta
-    };       
+            return alerta
 
-}
+    };
 
-
+       
+};
