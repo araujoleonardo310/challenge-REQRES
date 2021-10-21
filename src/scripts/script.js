@@ -21,14 +21,14 @@ async function getValores() {
 
     } catch (error) {
         var alerta = alert("Dados incorretos!");
-        return alerta
+        return alerta;
 
     };
 };
 
 const GetUsers = async () => {
     var responseUsers = await axios.get(`${api}/users?page=2`);
-    ListUsers(responseUsers.data.data)
+    ListUsers(responseUsers.data.data);
 }
 
 GetUsers();
@@ -44,7 +44,6 @@ function ListUsers(item) {
     `
     let usuarios = "";
     item.forEach(element => {
-        const name = `${element.first_name} ${element.last_name}`;
         usuarios +=
             `
         <div class="users">
@@ -62,19 +61,13 @@ function ListUsers(item) {
     })
 }
 
-var exampleModal = document.getElementById('exampleModal')
+var exampleModal = document.getElementById('exampleModal');
 exampleModal.addEventListener('show.bs.modal', function (event) {
-    // Button that triggered the modal
-    var button = event.relatedTarget
-    // Extract info from data-bs-* attributes
-    var recipient = button.getAttribute('data-bs-whatever')
-    // If necessary, you could initiate an AJAX request here
-    // and then do the updating in a callback.
-    //
-    // Update the modal's content.
-    var modalTitle = exampleModal.querySelector('.modal-title')
-    var modalBodyInput = exampleModal.querySelector('.modal-body input')
+    var button = event.relatedTarget;
+    var recipient = button.getAttribute('data-bs-whatever');
+    var modalTitle = exampleModal.querySelector('.modal-title');
+    var modalBodyInput = exampleModal.querySelector('.modal-body input');
 
-    modalTitle.textContent = 'Nova mensagem'
-    modalBodyInput.value = recipient
+    modalTitle.textContent = 'Nova mensagem';
+    modalBodyInput.value = recipient;
 })
